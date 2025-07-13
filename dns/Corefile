@@ -1,0 +1,9 @@
+. {
+    hosts {
+        192.168.3.20 khanh.nguyen khanh1.thlone khanh2.thlone tung.thlone
+        fallthrough
+    }
+    forward . 8.8.8.8
+    log
+    errors
+}
