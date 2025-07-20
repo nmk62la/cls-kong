@@ -74,6 +74,7 @@ services:
       KONG_PROXY_LISTEN_SSL: 0.0.0.0:443
       KONG_ADMIN_LISTEN: 0.0.0.0:8001
       KONG_ADMIN_GUI_LISTEN: 0.0.0.0:8002
+      COMMOND_HOST: tung.thlone
     depends_on:
       - kong-database
     healthcheck:
@@ -117,8 +118,8 @@ services:
       - N8N_HOST=192.168.3.40
       - N8N_PORT=5678
       - WEBHOOK_TUNNEL_URL=http://192.168.2.50:5678
-      - N8N_HOST=tung.thlone
       - N8N_SECURE_COOKIE=false
+      - COMMOND_HOST=tung.thlone
     volumes:
       - n8n_data:/home/node/.n8n
     networks:
